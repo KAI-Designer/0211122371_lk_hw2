@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource prefix="/">
+    <file>Background_mainPage.jpg</file>
+    <file>Login_bk.jpg</file>
+    <file>op_bk.jpg</file>
+</qresource>
+</RCC>

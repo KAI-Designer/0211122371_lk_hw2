@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string>
+     QWidget#centralwidget {
+       background-image: url('D:/User/23907/Desktop/shu_qi_shi_xun/hw2/data/Background_mainPage.jpg');
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+     }
+    </string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>异常行为监控</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 18px; color: black; background-color: rgba(255, 255, 255, 150); padding: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="menuButtonLayout">
+      <item>
+       <widget class="QPushButton" name="mainPageButton">
+        <property name="text">
+         <string>人脸录入</string>
+        </property>
+        <connections>
+         <connect>
+          <sender>mainPageButton</sender>
+          <signal>clicked()</signal>
+          <receiver>MainWindow</receiver>
+          <slot>open_face_registration()</slot>
+          <hints>
+           <hint type="sourcelabel">
+            <x>253</x>
+            <y>42</y>
+           </hint>
+           <hint type="destinationlabel">
+            <x>384</x>
+            <y>217</y>
+           </hint>
+          </hints>
+         </connect>
+        </connections>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="abnormalBehaviorButton">
+        <property name="text">
+         <string>异常行为监控</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="peopleFlowMonitorButton">
+        <property name="text">
+         <string>人流量监控</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="modifyInfoButton">
+        <property name="text">
+         <string>修改密码</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="logoutButton">
+        <property name="text">
+         <string>退出账号</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="abnormalBehaviorToggle">
+      <property name="text">
+       <string>启用异常行为检测</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QGroupBox" name="camera1GroupBox">
+        <property name="title">
+         <string>摄像头 1</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget1">
+           <widget class="QWidget" name="camera1View1">
+            <layout class="QVBoxLayout" name="verticalLayout_3"/>
+           </widget>
+           <widget class="QWidget" name="camera1View2">
+            <layout class="QVBoxLayout" name="verticalLayout_4"/>
+           </widget>
+           <widget class="QWidget" name="camera1View3">
+            <layout class="QVBoxLayout" name="verticalLayout_5"/>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QRadioButton" name="radioButton1_1">
+             <property name="text">
+              <string>源 1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton1_2">
+             <property name="text">
+              <string>源 2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton1_3">
+             <property name="text">
+              <string>源 3</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="camera2GroupBox">
+        <property name="title">
+         <string>摄像头 2</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget2">
+           <widget class="QWidget" name="camera2View1">
+            <layout class="QVBoxLayout" name="verticalLayout_7"/>
+           </widget>
+           <widget class="QWidget" name="camera2View2">
+            <layout class="QVBoxLayout" name="verticalLayout_8"/>
+           </widget>
+           <widget class="QWidget" name="camera2View3">
+            <layout class="QVBoxLayout" name="verticalLayout_9"/>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QRadioButton" name="radioButton2_1">
+             <property name="text">
+              <string>源 1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton2_2">
+             <property name="text">
+              <string>源 2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton2_3">
+             <property name="text">
+              <string>源 3</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="camera3GroupBox">
+        <property name="title">
+         <string>摄像头 3</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget3">
+           <widget class="QWidget" name="camera3View1">
+            <layout class="QVBoxLayout" name="verticalLayout_11"/>
+           </widget>
+           <widget class="QWidget" name="camera3View2">
+            <layout class="QVBoxLayout" name="verticalLayout_12"/>
+           </widget>
+           <widget class="QWidget" name="camera3View3">
+            <layout class="QVBoxLayout" name="verticalLayout_13"/>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QRadioButton" name="radioButton3_1">
+             <property name="text">
+              <string>源 1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton3_2">
+             <property name="text">
+              <string>源 2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton3_3">
+             <property name="text">
+              <string>源 3</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="alertList">
+      <property name="title">
+       <string>异常行为警报列表</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_14"/>
+      <property name="styleSheet">
+       <string notr="true">color: black; background-color: rgba(255, 255, 255, 150); padding: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="historyRecord">
+      <property name="title">
+       <string>异常行为历史记录</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_15"/>
+      <property name="styleSheet">
+       <string notr="true">color: black; background-color: rgba(255, 255, 255, 150); padding: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exportButton">
+      <property name="text">
+       <string>导出数据</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 14px; color: white; background-color: #4CAF50; border: none; padding: 10px 24px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 16px;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>peopleFlowMonitorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_people_flow_monitor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>modifyInfoButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_password_change_dialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>logoutButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_login_dialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mainPageButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_face_registration()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
